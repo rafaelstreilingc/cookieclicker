@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Clicker - Versão Avançada</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Clicker Inspired Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <header>
-            <h1>Cookie Clicker - Versão Avançada</h1>
-            <p id="welcomeMessage">Bem-vindo de volta, jogue para ganhar cookies!</p>
-        </header>
+  <div class="game-container">
+    <header>
+      <h1>🍪 Cookie Clicker Inspired Game</h1>
+      <p>Click on the cookie to earn more!</p>
+    </header>
 
-        <!-- Div do Cookie -->
-        <div class="cookie" id="cookie" onclick="clickCookie()">
-            🍪
-        </div>
-
-        <!-- Score e Progresso -->
-        <div class="score-container">
-            <p><strong>Cookies: </strong><span id="cookieCount">0</span></p>
-            <div class="progress-container">
-                <p>Progresso de cookies:</p>
-                <div class="progress-bar">
-                    <div id="progress" class="progress"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Barra de Energia -->
-        <div class="energy-container">
-            <p>Energia: <span id="energyCount">100</span>%</p>
-            <div class="energy-bar">
-                <div id="energy" class="energy"></div>
-            </div>
-        </div>
-
-        <!-- Upgrades e Assistentes -->
-        <div class="upgrades">
-            <h3>Upgrades</h3>
-            <button id="upgradeButton" onclick="buyUpgrade()">Comprar Upgrade (+1 cookie por clique) - 50 cookies</button>
-            <p><strong>Upgrades comprados: </strong><span id="upgradeCount">0</span></p>
-        </div>
-
-        <div class="auto-generators">
-            <h3>Assistentes Automáticos</h3>
-            <button id="autoButton" onclick="buyAutoGenerator()">Comprar Fazendeiro (+1 cookie/s) - 100 cookies</button>
-            <p><strong>Fazendeiros: </strong><span id="farmerCount">0</span></p>
-        </div>
-
-        <!-- Desafios Diários -->
-        <div class="daily-challenges">
-            <h3>Desafio Diário</h3>
-            <p id="challengeText">Clique para completar o desafio do dia e ganhar um bônus!</p>
-            <button id="dailyChallengeButton" onclick="completeDailyChallenge()">Completar Desafio</button>
-        </div>
-
-        <div class="reset-container">
-            <button onclick="resetGame()">Reiniciar o Jogo</button>
-        </div>
+    <div class="cookie-section">
+      <button id="cookie" class="cookie-btn">
+        <img src="https://via.placeholder.com/150?text=Click+Me" alt="Cookie">
+      </button>
+      <p id="cookie-count">Cookies: 0</p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="upgrades-section">
+      <h2>Upgrades</h2>
+      <button id="upgrade1" class="upgrade-btn" disabled>Buy Farmer - 50 Cookies</button>
+      <button id="upgrade2" class="upgrade-btn" disabled>Buy Factory - 200 Cookies</button>
+    </div>
+
+    <footer>
+      <p>Created by Rafael Caetano Streiling - For School Project 🎓</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
