@@ -1,0 +1,117 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Estilo do contêiner principal */
+.game-container {
+    text-align: center;
+    width: 380px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#cookie {
+    font-size: 120px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    margin: 20px;
+}
+
+#cookie:hover {
+    transform: scale(1.1);
+}
+
+.score-container {
+    margin-top: 20px;
+}
+
+.progress-container {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+.energy-container {
+    margin-top: 20px;
+}
+
+.energy-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.energy {
+    height: 100%;
+    width: 100%;
+    background-color: #ff0000;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.upgrades, .auto-generators, .daily-challenges {
+    margin-top: 20px;
+}
+
+#challengeText {
+    margin-bottom: 10px;
+}
+
+.reset-container {
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
