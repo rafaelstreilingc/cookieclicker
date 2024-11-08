@@ -1,117 +1,96 @@
-/* Resetando margens e paddings */
+/* Resetando o estilo padrão do navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Definindo a fonte e o estilo básico */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Estilo do contêiner principal */
+/* Contêiner principal */
 .game-container {
-    text-align: center;
-    width: 380px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
+/* Estilo do título */
 header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-size: 2.5em;
+  color: #FFB74D;
+  margin-bottom: 0.5em;
 }
 
-#cookie {
-    font-size: 120px;
-    cursor: pointer;
-    transition: transform 0.1s ease;
-    margin: 20px;
+/* Estilo do cookie */
+.cookie-section {
+  margin: 20px 0;
 }
 
-#cookie:hover {
-    transform: scale(1.1);
+.cookie-btn {
+  background-color: #FFB74D;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.score-container {
-    margin-top: 20px;
+.cookie-btn:hover {
+  transform: scale(1.1);
 }
 
-.progress-container {
-    margin-top: 10px;
+.cookie-btn img {
+  width: 100px;
+  height: 100px;
 }
 
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 10px;
-    height: 12px;
-    width: 100%;
+#cookie-count {
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
-.progress {
-    height: 100%;
-    width: 0%;
-    background-color: #4CAF50;
-    border-radius: 10px;
+/* Botões de upgrade */
+.upgrades-section {
+  margin-top: 30px;
 }
 
-.energy-container {
-    margin-top: 20px;
+.upgrade-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
 }
 
-.energy-bar {
-    background-color: #ddd;
-    border-radius: 10px;
-    height: 12px;
-    width: 100%;
-    margin-top: 5px;
+.upgrade-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-.energy {
-    height: 100%;
-    width: 100%;
-    background-color: #ff0000;
-    border-radius: 10px;
+.upgrade-btn:hover:not(:disabled) {
+  background-color: #45a049;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 10px 0;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.upgrades, .auto-generators, .daily-challenges {
-    margin-top: 20px;
-}
-
-#challengeText {
-    margin-bottom: 10px;
-}
-
-.reset-container {
-    margin-top: 30px;
-}
-
-h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #777;
 }
