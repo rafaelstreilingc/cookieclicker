@@ -21,16 +21,16 @@ body {
 .game-container {
   text-align: center;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
+  width: 600px; /* Aumentei a largura */
+  max-width: 100%;
 }
 
 /* Estilo do título */
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em; /* Tamanho maior para o título */
   color: #FFB74D;
   margin-bottom: 0.5em;
 }
@@ -44,8 +44,9 @@ header h1 {
   background-color: #FFB74D;
   border: none;
   border-radius: 50%;
-  padding: 30px;
+  padding: 50px; /* Aumentei o tamanho do botão */
   cursor: pointer;
+  font-size: 2.5em; /* Aumentei o tamanho do emoji */
   transition: transform 0.3s ease;
 }
 
@@ -53,13 +54,8 @@ header h1 {
   transform: scale(1.1);
 }
 
-.cookie-btn img {
-  width: 100px;
-  height: 100px;
-}
-
 #cookie-count {
-  font-size: 1.2em;
+  font-size: 1.5em; /* Aumentei o tamanho da fonte */
   margin-top: 10px;
 }
 
@@ -72,11 +68,11 @@ header h1 {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 24px; /* Aumentei o tamanho dos botões */
+  margin: 12px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition: background-color 0.3s ease;
 }
 
@@ -91,6 +87,6 @@ header h1 {
 
 footer {
   margin-top: 30px;
-  font-size: 0.9em;
+  font-size: 1em; /* Aumentei o tamanho da fonte do rodapé */
   color: #777;
 }
