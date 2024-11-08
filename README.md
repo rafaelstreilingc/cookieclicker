@@ -29,3 +29,38 @@ O jogo possui:
 - **Armazenamento Local**: Seu progresso é salvo no navegador, então você pode continuar de onde parou na próxima vez que visitar.
 
 Este projeto foi feito para fins educacionais e **não é** para substituir ou competir com o jogo original **Cookie Clicker**. É apenas uma maneira divertida de aprender e praticar programação enquanto nos inspiramos em uma mecânica popular de jogo.
+
+---
+
+## 🧑‍💻 Technologies Used | Tecnologias Usadas
+
+- **HTML5** - Structure of the game page.
+- **CSS3** - Styling the game and making it visually appealing.
+- **JavaScript** - Game mechanics and logic (clicking, upgrades, and auto-generators).
+- **localStorage** - To store the player's progress and ensure the game state is saved.
+
+---
+
+## 🎮 Game Features | Funcionalidades do Jogo
+
+- **Cookie Clicking**: Earn cookies by clicking on the giant cookie 🍪.
+- **Upgrades**: Increase your cookies per click with upgrades 🛠️.
+- **Auto Generators**: Purchase automatic cookie-generating assistants 🌾.
+- **Daily Challenges**: Complete daily tasks for bonus rewards 🎁.
+- **Energy System**: Keep track of your energy ⚡ to prevent burnout.
+- **Progress Saving**: Your game progress is saved using `localStorage` 🔒.
+
+---
+
+## 🎯 Future Improvements | Melhorias Futuras
+
+- **More Upgrades**: Add more upgrade types and cookie-generating assistants 💡.
+- **Special Events**: Include random events that could impact the gameplay 🎲.
+- **Leaderboard**: A way to compare your cookie count with others 🏆.
+- **Mobile Optimisation**: Improve the game's responsiveness on mobile devices 📱.
+
+---
+
+## 📄 License | Licença
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
