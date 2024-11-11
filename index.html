@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo Inspirado em Cookie Clicker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Simples</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="game-container">
-    <header>
-      <h1>🍪 Jogo Inspirado em Cookie Clicker</h1>
-      <p>Clique no biscoito para ganhar mais!</p>
-    </header>
+    <h1>Cookie Clicker Simples</h1>
+    <div id="cookie">🍪</div>
+    <div id="counter">Cookies: 0</div>
 
-    <div class="cookie-section">
-      <button id="cookie" class="cookie-btn" disabled>
-        🍪 <!-- Emoji de Cookie diretamente no botão -->
-      </button>
-      <p id="cookie-count">Cookies: 0</p>
-      <p id="energy-status">Energia: 100%</p> <!-- Exibição da energia -->
-      <p id="energy-regeneration">Energia regenerando...</p> <!-- Exibição da regeneração -->
+    <!-- Botão para abrir o pop-up da loja -->
+    <button id="shopBtn" class="button">Abrir Loja</button>
+
+    <!-- Pop-up da loja -->
+    <div id="shopPopup" class="shop-popup">
+        <div class="popup-content">
+            <span id="closeShop" class="close-btn">&times;</span>
+            
+            <h2>Loja</h2>
+            
+            <!-- Seção de Máquinas (Agora são as responsáveis pelo Auto-Clicker) -->
+            <h3>Máquinas (Geram cookies automaticamente)</h3>
+            <div id="machines">
+                <button class="item" data-price="2000" data-type="machine">Máquina de Cookies I (Custo: 2000)</button>
+                <button class="item" data-price="4000" data-type="machine">Máquina de Cookies II (Custo: 4000)</button>
+                <button class="item" data-price="8000" data-type="machine">Máquina de Cookies III (Custo: 8000)</button>
+                <button class="item" data-price="16000" data-type="machine">Máquina de Cookies IV (Custo: 16000)</button>
+                <button class="item" data-price="32000" data-type="machine">Máquina de Cookies V (Custo: 32000)</button>
+            </div>
+
+            <!-- Seção de Funcionários (Agora também geram cookies automaticamente) -->
+            <h3>Funcionários (Geram cookies automaticamente)</h3>
+            <div id="employees">
+                <button class="item" data-price="500" data-type="employee">Funcionário I (Custo: 500)</button>
+                <button class="item" data-price="1000" data-type="employee">Funcionário II (Custo: 1000)</button>
+                <button class="item" data-price="2000" data-type="employee">Funcionário III (Custo: 2000)</button>
+                <button class="item" data-price="4000" data-type="employee">Funcionário IV (Custo: 4000)</button>
+                <button class="item" data-price="8000" data-type="employee">Funcionário V (Custo: 8000)</button>
+            </div>
+        </div>
     </div>
 
-    <div class="upgrades-section">
-      <h2>Upgrades</h2>
-      <button id="upgrade1" class="upgrade-btn" disabled>Comprar Fazendeiro - 50 Cookies</button>
-      <button id="upgrade2" class="upgrade-btn" disabled>Comprar Fábrica - 200 Cookies</button>
-      <button id="upgrade3" class="upgrade-btn" disabled>Aumentar Energia Máxima - 100 Cookies</button> <!-- Upgrade de energia -->
-      <button id="upgrade4" class="upgrade-btn" disabled>Padeiro (Reduz Energia por Clique) - 100 Cookies</button> <!-- Novo upgrade -->
-    </div>
+    <!-- Botão para inserir código de cheat -->
+    <button id="cheatBtn" class="button">Inserir Código</button>
 
-    <footer>
-      <p>Criado por Rafael Caetano Streiling - Para Projeto Escolar 🎓</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
