@@ -1,112 +1,103 @@
-/* Resetando o estilo padrão do navegador */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Definindo a fonte e o estilo básico */
+/* Estilo geral da página */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden; /* Evita barras de rolagem */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #cbf2ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha ao centro no eixo Y */
+    align-items: center; /* Alinha ao centro no eixo X */
+    height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    margin: 0; /* Remove o espaço extra nas margens */
 }
 
-/* Contêiner principal */
-.game-container {
-  text-align: center;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 120vw;  /* 80% da largura da tela */
-  height: 80vh;  /* 80% da altura da tela */
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+/* Estilo do emoji de cookie */
+#cookie {
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease-in-out; /* Adiciona animação suave de clique */
 }
 
-/* Estilo do título */
-header h1 {
-  font-size: 3em;
-  color: #FFB74D;
-  margin-bottom: 0.5em;
+/* Animação ao clicar no emoji */
+#cookie:active {
+    transform: scale(0.9); /* Reduz o tamanho do emoji para dar o efeito de clique */
 }
 
-/* Estilo do cookie */
-.cookie-section {
-  margin: 20px 0;
+/* Estilo do contador de cookies */
+#counter {
+    font-size: 30px;
+    margin: 20px 0;
 }
 
-.cookie-btn {
-  background-color: #FFB74D;
-  border: none;
-  border-radius: 50%;
-  padding: 50px;
-  cursor: pointer;
-  font-size: 2.5em;
-  transition: transform 0.3s ease;
+/* Estilo do botão */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.cookie-btn:hover {
-  transform: scale(1.1);
+/* Efeito de hover no botão */
+.button:hover {
+    background-color: #45a049;
 }
 
-#cookie-count {
-  font-size: 1.5em;
-  margin-top: 10px;
+/* Estilo do botão de loja */
+#shopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
 }
 
-/* Energia */
-#energy-status {
-  font-size: 1.2em;
-  margin-top: 10px;
+/* Estilo do pop-up da loja */
+.shop-popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: rgb(156, 203, 212);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: none;
+    z-index: 1000;
 }
 
-#energy-regeneration {
-  font-size: 1em;
-  color: #888;
-  margin-top: 5px;
+/* Estilo do conteúdo do pop-up */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Botões de upgrade */
-.upgrades-section {
-  margin-top: 30px;
+/* Estilo para o botão de fechar o pop-up */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
-.upgrade-btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  margin: 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease;
+/* Estilo para os itens da loja */
+.item {
+    background-color: #2196F3;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.upgrade-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.upgrade-btn:hover:not(:disabled) {
-  background-color: #45a049;
-}
-
-footer {
-  margin-top: 30px;
-  font-size: 1em;
-  color: #777;
+/* Efeito de hover nos itens da loja */
+.item:hover {
+    background-color: #1976D2;
 }
