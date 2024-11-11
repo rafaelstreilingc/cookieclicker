@@ -1,66 +1,76 @@
-# 🍪 Cookie Clicker - Inspired Game 🍪
+# Cookie Clicker Simples 🍪
 
-## 📚 Project Overview | Visão Geral do Projeto
+## 🇧🇷 Descrição 📜
 
-### 🇬🇧 English:
+Bem-vindo ao **Cookie Clicker Simples**, o jogo mais básico de todos, onde você clica em um emoji de cookie para ganhar cookies! 🍪  
+A ideia é **super simples**, mas com certeza vai te deixar "vidrado" (ou não 🤷‍♂️). O jogo inclui uma loja onde você pode comprar máquinas automáticas e contratar funcionários para gerar cookies passivamente. E, claro, tem aqueles **cheats** (códigos secretos), porque quem não adora trapacear, né? 😏
 
-This project is a **Cookie Clicker-inspired game** that I created as part of a **school assignment**. It is **not** a copy of the original game, nor is it intended to replace or be better than the actual **Cookie Clicker**. This is simply a personal project designed to showcase basic game mechanics and interactive web development using **HTML**, **CSS**, and **JavaScript**.
-
-The game features:
-- **Clicking Mechanics**: Earn cookies by clicking a giant cookie 🍪.
-- **Upgrades**: Buy upgrades to increase the number of cookies you earn per click.
-- **Auto Generators**: Purchase automatic cookie generators (e.g., farmers 🌾) to earn cookies passively.
-- **Daily Challenges**: Complete daily challenges for bonus rewards 🎉.
-- **Energy System**: Manage your energy ⚡ as you click to avoid burning out.
-- **Local Storage**: Your progress is saved in the browser, so you can continue where you left off next time you visit.
-
-This project was made for educational purposes and is not intended to compete with or replace the original **Cookie Clicker** game. It's just a fun way to learn and practice coding while being inspired by a popular game mechanic.
-
-### 🇧🇷 Português:
-
-Este projeto é um **jogo inspirado no Cookie Clicker** que eu criei como parte de um **trabalho escolar**. Ele **não** é uma cópia do jogo original, nem é destinado a substituir ou ser melhor que o **Cookie Clicker**. Trata-se de um projeto pessoal criado para mostrar mecânicas básicas de jogo e o desenvolvimento de aplicativos web interativos usando **HTML**, **CSS** e **JavaScript**.
-
-O jogo possui:
-- **Mecânica de Clique**: Ganhe cookies clicando em um cookie gigante 🍪.
-- **Upgrades**: Compre upgrades para aumentar a quantidade de cookies ganhos por clique.
-- **Geradores Automáticos**: Compre geradores automáticos de cookies (ex: fazendeiros 🌾) para ganhar cookies passivamente.
-- **Desafios Diários**: Complete desafios diários para ganhar recompensas bônus 🎉.
-- **Sistema de Energia**: Gerencie sua energia ⚡ enquanto clica para evitar "queimar".
-- **Armazenamento Local**: Seu progresso é salvo no navegador, então você pode continuar de onde parou na próxima vez que visitar.
-
-Este projeto foi feito para fins educacionais e **não é** para substituir ou competir com o jogo original **Cookie Clicker**. É apenas uma maneira divertida de aprender e praticar programação enquanto nos inspiramos em uma mecânica popular de jogo.
+### Funcionalidades:
+- **Clique no cookie** para ganhar cookies.
+- **Loja** para comprar máquinas e funcionários que geram cookies automaticamente (spoiler: é bem básico).
+- **Cheats** para ganhar cookies instantaneamente ou aumentar a produção (se você não gosta de jogar "de maneira justa").
+- Layout **extremamente simples**, porque, quem vai gastar tempo com design, né? 😅
 
 ---
 
-## 🧑‍💻 Technologies Used | Tecnologias Usadas
+## 🇧🇷 Como Jogar 🎮
 
-- **HTML5** - Structure of the game page.
-- **CSS3** - Styling the game and making it visually appealing.
-- **JavaScript** - Game mechanics and logic (clicking, upgrades, and auto-generators).
-- **localStorage** - To store the player's progress and ensure the game state is saved.
-
----
-
-## 🎮 Game Features | Funcionalidades do Jogo
-
-- **Cookie Clicking**: Earn cookies by clicking on the giant cookie 🍪.
-- **Upgrades**: Increase your cookies per click with upgrades 🛠️.
-- **Auto Generators**: Purchase automatic cookie-generating assistants 🌾.
-- **Daily Challenges**: Complete daily tasks for bonus rewards 🎁.
-- **Energy System**: Keep track of your energy ⚡ to prevent burnout.
-- **Progress Saving**: Your game progress is saved using `localStorage` 🔒.
+1. **Clique no cookie** 🍪 no centro da tela para ganhar cookies.
+2. Use os cookies para **comprar máquinas** ou **contratar funcionários** que geram cookies automaticamente (mas se você não tiver paciência, tem os cheats!).
+3. Quer trapacear? Use os códigos secretos:
+   - **C00KIE**: Recebe cookies extras. (Óbvio, né? 🤦‍♂️)
+   - **VOVO**: Ganha um **boost de 200%** na produção de cookies (porque a vovó é **professional** no quesito cookies).
+4. Para abrir a **loja**, basta clicar no botão no canto inferior direito da tela (não é nada demais, é só um botão mesmo 😎).
 
 ---
 
-## 🎯 Future Improvements | Melhorias Futuras
+## 🇧🇷 Tecnologias Utilizadas ⚙️
 
-- **More Upgrades**: Add more upgrade types and cookie-generating assistants 💡.
-- **Special Events**: Include random events that could impact the gameplay 🎲.
-- **Leaderboard**: A way to compare your cookie count with others 🏆.
-- **Mobile Optimisation**: Improve the game's responsiveness on mobile devices 📱.
+- **HTML5** - A estrutura básica, porque não estamos inventando a roda aqui.
+- **CSS3** - Estilos simples, porque design é para quem tem tempo, né?
+- **JavaScript** - Lógica do jogo (e claro, bem simples, porque ninguém tem tempo para complicar).
 
 ---
 
-## 📄 License | Licença
+## 🇧🇷 Créditos 🏆
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este projeto foi feito por uma **pessoa que estava sem ideias e decidiu não perder mais tempo**. Se você se divertir, ótimo. Se não... bem, ao menos o projeto não é grande, né? 😏
+---
+
+# Cookie Clicker Simple 🍪
+
+## 🇬🇧 Description 📜
+
+Welcome to **Cookie Clicker Simple**, the most basic game ever, where you click on a cookie emoji to earn cookies! 🍪  
+The concept is **super simple**, but it's sure to keep you "hooked" (or not 🤷‍♂️). The game includes a shop where you can buy automatic machines and hire employees to passively generate cookies. Oh, and of course, there are some **cheats** (secret codes) because who doesn’t love a good cheat, right? 😏
+
+### Features:
+- **Click on the cookie** to earn cookies.
+- **Shop** to buy machines and employees that generate cookies automatically (spoiler: it’s pretty basic).
+- **Cheats** to get cookies instantly or boost your cookie production (for those who don’t care about playing "fair").
+- **Super simple** layout, because who has time for design? 😅
+
+---
+
+## 🇬🇧 How to Play 🎮
+
+1. **Click the cookie** 🍪 in the middle of the screen to earn cookies.
+2. Use the cookies to **buy machines** or **hire employees** to generate cookies automatically (but if you’re too lazy, you can use the cheats!).
+3. Want to cheat? Use the secret codes:
+   - **C00KIE**: Get extra cookies. (Duh, right? 🤦‍♂️)
+   - **VOVO**: Get a **200% boost** in cookie production (because grandma is **professional** at making cookies).
+4. To open the **shop**, just click the button at the bottom-right corner of the screen (nothing fancy, it’s just a button 😎).
+
+---
+
+## 🇬🇧 Technologies Used ⚙️
+
+- **HTML5** - Basic structure, because we’re not reinventing the wheel here.
+- **CSS3** - Simple styles, because design is for people with time, right?
+- **JavaScript** - Game logic (and yes, it’s super simple, because who has time to complicate things?).
+
+---
+
+## 🇬🇧 Credits 🏆
+
+This project was made by a **person who had no ideas and decided not to waste more time**. If you have fun, great. If not… well, at least it’s a small project, right? 😏
