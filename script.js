@@ -1,140 +1,110 @@
-// Definindo as variáveis do jogo
-let cookieCount = 0;
+// Variáveis para controle do jogo
+let cookies = 0;
 let cookiesPerClick = 1;
-let energy = 100; // Energia inicial
-let maxEnergy = 100; // Energia máxima
-let energyConsumption = 10; // Quantidade de energia consumida por clique (inicialmente 10%)
-let energyRegenerationRate = 1; // Regeneração de energia por segundo
-let upgrade1Cost = 50;
-let upgrade2Cost = 200;
-let upgrade3Cost = 100; // Custo para o upgrade de aumentar a energia
-let upgrade4Cost = 100; // Custo para o upgrade de padeiro (Farmer)
-let upgrade1Enabled = false;
-let upgrade2Enabled = false;
-let upgrade3Enabled = false;
-let upgrade4Enabled = false; // Controle de estado do upgrade do padeiro (Farmer)
+let cookiesPerSecond = 0;
+let machines = 0;
+let employees = 0;
 
-// Selecionando os elementos do DOM
-const cookieButton = document.getElementById("cookie");
-const cookieCountElement = document.getElementById("cookie-count");
-const energyStatusElement = document.getElementById("energy-status");
-const energyRegenerationElement = document.getElementById("energy-regeneration");
-const upgrade1Button = document.getElementById("upgrade1");
-const upgrade2Button = document.getElementById("upgrade2");
-const upgrade3Button = document.getElementById("upgrade3");
-const upgrade4Button = document.getElementById("upgrade4"); // Novo upgrade
+// Elementos HTML
+const cookieElement = document.getElementById("cookie");
+const counterElement = document.getElementById("counter");
+const shopBtn = document.getElementById("shopBtn");
+const shopPopup = document.getElementById("shopPopup");
+const closeShop = document.getElementById("closeShop");
+const cheatBtn = document.getElementById("cheatBtn");
 
-// Função para atualizar a contagem de cookies e a energia no display
-function updateGameStatus() {
-  cookieCountElement.textContent = `Cookies: ${cookieCount}`;
-  energyStatusElement.textContent = `Energia: ${energy}%`;
-  energyRegenerationElement.textContent = `Energia regenerando... ${energy}/${maxEnergy}`;
-
-  checkUpgrades();
+// Função para atualizar o contador de cookies na tela
+function updateCounter() {
+    counterElement.textContent = `Cookies: ${cookies}`;
 }
 
-// Função para lidar com o clique no cookie
-cookieButton.addEventListener("click", () => {
-  if (energy >= energyConsumption) {
-    cookieCount += cookiesPerClick;
-    energy -= energyConsumption;
-    updateGameStatus();
-  }
-});
-
-// Função para ativar o primeiro upgrade (Farmer)
-upgrade1Button.addEventListener("click", () => {
-  if (cookieCount >= upgrade1Cost) {
-    cookieCount -= upgrade1Cost;
-    cookiesPerClick += 2;
-    upgrade1Cost = Math.floor(upgrade1Cost * 1.5);
-    upgrade1Enabled = true;
-    upgrade1Button.textContent = `Fazendeiro Comprado!`;
-    updateGameStatus();
-  }
-});
-
-// Função para ativar o segundo upgrade (Factory)
-upgrade2Button.addEventListener("click", () => {
-  if (cookieCount >= upgrade2Cost) {
-    cookieCount -= upgrade2Cost;
-    cookiesPerClick += 5;
-    upgrade2Cost = Math.floor(upgrade2Cost * 1.5);
-    upgrade2Enabled = true;
-    upgrade2Button.textContent = `Fábrica Comprada!`;
-    updateGameStatus();
-  }
-});
-
-// Função para ativar o upgrade de aumento de energia
-upgrade3Button.addEventListener("click", () => {
-  if (cookieCount >= upgrade3Cost) {
-    cookieCount -= upgrade3Cost;
-    maxEnergy += 50; // Aumenta o limite máximo de energia
-    upgrade3Cost = Math.floor(upgrade3Cost * 1.5); // Aumenta o custo do upgrade
-    upgrade3Enabled = true;
-    upgrade3Button.textContent = `Energia Máxima Aumentada!`;
-    updateGameStatus();
-  }
-});
-
-// Função para ativar o upgrade do Padeiro (Farmer) - Reduz consumo de energia
-upgrade4Button.addEventListener("click", () => {
-  if (cookieCount >= upgrade4Cost) {
-    cookieCount -= upgrade4Cost;
-    energyConsumption = Math.max(energyConsumption - 2, 2); // Reduz o consumo de energia por clique (não pode ir abaixo de 2%)
-    upgrade4Cost = Math.floor(upgrade4Cost * 1.5); // Aumenta o custo do upgrade
-    upgrade4Enabled = true;
-    upgrade4Button.textContent = `Padeiro Comprado! Consumo de Energia Reduzido!`;
-    updateGameStatus();
-  }
-});
-
-// Função para verificar se os upgrades estão habilitados
-function checkUpgrades() {
-  if (cookieCount >= upgrade1Cost && !upgrade1Enabled) {
-    upgrade1Button.disabled = false;
-  } else {
-    upgrade1Button.disabled = true;
-  }
-
-  if (cookieCount >= upgrade2Cost && !upgrade2Enabled) {
-    upgrade2Button.disabled = false;
-  } else {
-    upgrade2Button.disabled = true;
-  }
-
-  if (cookieCount >= upgrade3Cost && !upgrade3Enabled) {
-    upgrade3Button.disabled = false;
-  } else {
-    upgrade3Button.disabled = true;
-  }
-
-  if (cookieCount >= upgrade4Cost && !upgrade4Enabled) {
-    upgrade4Button.disabled = false;
-  } else {
-    upgrade4Button.disabled = true;
-  }
+// Função para iniciar a geração automática de cookies (através de máquinas e funcionários)
+function startAutoGeneration() {
+    setInterval(function() {
+        cookies += cookiesPerSecond;
+        updateCounter();
+    }, 1000); // Atualiza a cada 1 segundo
 }
 
-// Função para regenerar energia automaticamente
-function regenerateEnergy() {
-  if (energy < maxEnergy) {
-    energy += energyRegenerationRate;
-    if (energy > maxEnergy) energy = maxEnergy;
-    updateGameStatus();
-  }
+// Abre o pop-up da loja
+shopBtn.addEventListener("click", function() {
+    shopPopup.style.display = "block"; // Mostra o pop-up da loja
+});
 
-  // Habilita o botão de clique quando a energia estiver disponível
-  if (energy >= energyConsumption) {
-    cookieButton.disabled = false;
-  } else {
-    cookieButton.disabled = true;
-  }
+// Fecha o pop-up da loja
+closeShop.addEventListener("click", function() {
+    shopPopup.style.display = "none"; // Esconde o pop-up
+});
+
+// Evento de clique no emoji de cookie
+cookieElement.addEventListener("click", function() {
+    cookies += cookiesPerClick;
+    updateCounter();
+});
+
+// Ajustando os preços das máquinas e a quantidade de cookies gerados
+const machinesPrice = [2000, 4000, 8000, 16000, 32000]; // Preços das máquinas mais altos
+const machinesCookiesPerSecond = [10, 20, 40, 80, 160]; // Quantidade de cookies por segundo por máquina
+
+// Função para comprar máquinas e funcionários (Agora geram cookies automaticamente)
+document.querySelectorAll('.item').forEach((item, index) => {
+    item.addEventListener("click", function() {
+        const price = parseInt(item.getAttribute("data-price"));
+        const type = item.getAttribute("data-type");
+
+        // Verifica se o jogador tem cookies suficientes
+        if (cookies >= price) {
+            cookies -= price;
+            if (type === "machine") {
+                machines++;
+                cookiesPerSecond += machinesCookiesPerSecond[index]; // Máquinas agora geram mais cookies
+            } else if (type === "employee") {
+                employees++;
+                cookiesPerSecond += 2; // Funcionários continuam gerando 2 cookies por segundo
+            }
+
+            item.textContent = `${item.textContent.split(" (")[0]} (Comprado)`; // Atualiza o texto do botão
+            updateCounter();
+        } else {
+            alert("Você não tem cookies suficientes para comprar este item.");
+        }
+    });
+});
+
+// Função para aplicar o código de cheat
+function applyCheatCode(code) {
+    if (code === "C00KIE") {
+        const cookiesToAdd = parseInt(prompt("Quantos cookies você quer adicionar?", "1000"));
+        if (isNaN(cookiesToAdd) || cookiesToAdd <= 0) {
+            alert("Por favor, insira um número válido.");
+        } else {
+            cookies += cookiesToAdd;
+            updateCounter();
+        }
+    } else if (code === "VOVO") {
+        const boost = 2; // 200% de boost
+        cookiesPerSecond *= boost; // Aumenta a geração de cookies por segundo em 200%
+        alert("Você ganhou um boost de 200% de cookies por segundo graças à Vovó!");
+    } else {
+        alert("Código inválido!");
+    }
 }
 
-// Chama a regeneração de energia a cada segundo
-setInterval(regenerateEnergy, 1000);
+// Função para abrir o pop-up de códigos
+function openCheatCodePopup() {
+    const code = prompt("Digite o código secreto:");
+    if (code) {
+        applyCheatCode(code.toUpperCase()); // Converte o código para maiúsculas
+    }
+}
 
-// Atualiza o status inicial do jogo
-updateGameStatus();
+// Estilo para o botão de código no canto inferior direito
+cheatBtn.style.position = "fixed";
+cheatBtn.style.bottom = "80px"; // Coloca o botão um pouco acima do botão da loja
+cheatBtn.style.right = "20px";
+cheatBtn.style.zIndex = "100";  // Garante que o botão fique em cima da loja
+
+cheatBtn.addEventListener("click", openCheatCodePopup);
+
+// Inicia a geração automática de cookies (máquinas e funcionários)
+startAutoGeneration();
