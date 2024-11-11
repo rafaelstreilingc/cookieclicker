@@ -1,23 +1,23 @@
 /* Estilo geral da página */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #cbf2ea;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Alinha ao centro no eixo Y */
-    align-items: center; /* Alinha ao centro no eixo X */
+    font-family: Arial, sans-serif; /* Define a fonte usada na página */
+    text-align: center; /* Alinha o conteúdo no centro horizontal */
+    padding: 20px; /* Adiciona um padding de 20px ao redor do conteúdo */
+    background-color: #cbf2ea; /* Define a cor de fundo da página */
+    display: flex; /* Usamos o modelo de layout flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: center; /* Alinha ao centro no eixo Y (vertical) */
+    align-items: center; /* Alinha ao centro no eixo X (horizontal) */
     height: 100vh; /* Garante que o body ocupe toda a altura da janela */
     margin: 0; /* Remove o espaço extra nas margens */
 }
 
 /* Estilo do emoji de cookie */
 #cookie {
-    font-size: 100px;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.2s ease-in-out; /* Adiciona animação suave de clique */
+    font-size: 100px; /* Define o tamanho da fonte do emoji */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse sobre o emoji */
+    user-select: none; /* Impede que o emoji seja selecionado ao clicar */
+    transition: transform 0.2s ease-in-out; /* Adiciona uma animação suave ao clicar no emoji */
 }
 
 /* Animação ao clicar no emoji */
@@ -27,77 +27,77 @@ body {
 
 /* Estilo do contador de cookies */
 #counter {
-    font-size: 30px;
-    margin: 20px 0;
+    font-size: 30px; /* Define o tamanho da fonte do contador */
+    margin: 20px 0; /* Adiciona um espaçamento de 20px acima e abaixo do contador */
 }
 
 /* Estilo do botão */
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Define o padding do botão (distância interna) */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    margin: 10px; /* Adiciona uma margem de 10px ao redor do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse sobre o botão */
+    border: none; /* Remove a borda padrão do botão */
+    background-color: #4CAF50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo */
 }
 
 /* Efeito de hover no botão */
 .button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Muda a cor do botão quando o mouse passa sobre ele */
 }
 
 /* Estilo do botão de loja */
 #shopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff5722;
+    position: fixed; /* Posiciona o botão de forma fixa na tela */
+    bottom: 20px; /* Coloca o botão 20px acima da borda inferior da tela */
+    right: 20px; /* Coloca o botão 20px distante da borda direita da tela */
+    background-color: #ff5722; /* Define a cor de fundo do botão da loja */
 }
 
 /* Estilo do pop-up da loja */
 .shop-popup {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 300px;
-    background-color: rgb(156, 203, 212);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    display: none;
-    z-index: 1000;
+    position: fixed; /* Posiciona o pop-up de forma fixa na tela */
+    bottom: 0; /* Coloca o pop-up na parte inferior da tela */
+    right: 0; /* Coloca o pop-up na parte direita da tela */
+    width: 300px; /* Define a largura do pop-up */
+    background-color: rgb(156, 203, 212); /* Define a cor de fundo do pop-up */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do pop-up */
+    padding: 20px; /* Adiciona um espaçamento interno de 20px */
+    display: none; /* Inicialmente, o pop-up está escondido */
+    z-index: 1000; /* Garante que o pop-up fique acima de outros elementos */
 }
 
 /* Estilo do conteúdo do pop-up */
 .popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex; /* Usa o modelo de layout flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens do conteúdo em uma coluna */
+    align-items: flex-start; /* Alinha os itens do conteúdo à esquerda */
 }
 
 /* Estilo para o botão de fechar o pop-up */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 25px;
-    cursor: pointer;
+    position: absolute; /* Posiciona o botão de fechar de forma absoluta dentro do pop-up */
+    top: 10px; /* Coloca o botão de fechar 10px abaixo do topo do pop-up */
+    right: 10px; /* Coloca o botão de fechar 10px distante da borda direita do pop-up */
+    font-size: 25px; /* Define o tamanho da fonte do botão de fechar */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse sobre o botão */
 }
 
 /* Estilo para os itens da loja */
 .item {
-    background-color: #2196F3;
-    margin: 5px;
-    padding: 10px;
-    color: white;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #2196F3; /* Define a cor de fundo dos itens da loja */
+    margin: 5px; /* Adiciona uma margem de 5px ao redor dos itens */
+    padding: 10px; /* Adiciona um espaçamento interno de 10px aos itens */
+    color: white; /* Define a cor do texto dos itens como branca */
+    font-size: 14px; /* Define o tamanho da fonte dos itens */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos itens */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar o mouse sobre os itens */
 }
 
 /* Efeito de hover nos itens da loja */
 .item:hover {
-    background-color: #1976D2;
+    background-color: #1976D2; /* Muda a cor de fundo dos itens quando o mouse passa sobre eles */
 }
