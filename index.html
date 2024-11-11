@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <!-- Define o conjunto de caracteres do documento para UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Configura a página para ser responsiva, ajustando o layout conforme o tamanho da tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página que aparecerá na aba do navegador -->
     <title>Cookie Clicker Simples</title>
+
+    <!-- Link para o arquivo de estilo externo (CSS) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Título principal da página -->
     <h1>Cookie Clicker Simples</h1>
+
+    <!-- Exibe um emoji de cookie e um contador de cookies -->
     <div id="cookie">🍪</div>
     <div id="counter">Cookies: 0</div>
 
     <!-- Botão para abrir o pop-up da loja -->
     <button id="shopBtn" class="button">Abrir Loja</button>
 
-    <!-- Pop-up da loja -->
+    <!-- Pop-up da loja, inicialmente escondido -->
     <div id="shopPopup" class="shop-popup">
         <div class="popup-content">
-            <span id="closeShop" class="close-btn">&times;</span>
             
+            <!-- Botão para fechar o pop-up -->
+            <span id="closeShop" class="close-btn">&times;</span>
+
+            <!-- Título da loja -->
             <h2>Loja</h2>
             
-            <!-- Seção de Máquinas (Agora são as responsáveis pelo Auto-Clicker) -->
+            <!-- Seção de Máquinas (Geram cookies automaticamente) -->
             <h3>Máquinas (Geram cookies automaticamente)</h3>
             <div id="machines">
+                <!-- Botões para comprar máquinas, cada uma com preço e tipo -->
                 <button class="item" data-price="2000" data-type="machine">Máquina de Cookies I (Custo: 2000)</button>
                 <button class="item" data-price="4000" data-type="machine">Máquina de Cookies II (Custo: 4000)</button>
                 <button class="item" data-price="8000" data-type="machine">Máquina de Cookies III (Custo: 8000)</button>
@@ -31,9 +45,10 @@
                 <button class="item" data-price="32000" data-type="machine">Máquina de Cookies V (Custo: 32000)</button>
             </div>
 
-            <!-- Seção de Funcionários (Agora também geram cookies automaticamente) -->
+            <!-- Seção de Funcionários (Também geram cookies automaticamente) -->
             <h3>Funcionários (Geram cookies automaticamente)</h3>
             <div id="employees">
+                <!-- Botões para comprar funcionários, cada um com preço e tipo -->
                 <button class="item" data-price="500" data-type="employee">Funcionário I (Custo: 500)</button>
                 <button class="item" data-price="1000" data-type="employee">Funcionário II (Custo: 1000)</button>
                 <button class="item" data-price="2000" data-type="employee">Funcionário III (Custo: 2000)</button>
@@ -43,9 +58,10 @@
         </div>
     </div>
 
-    <!-- Botão para inserir código de cheat -->
+    <!-- Botão para abrir o campo de inserção de códigos cheats -->
     <button id="cheatBtn" class="button">Inserir Código</button>
 
+    <!-- Inclusão do arquivo de script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
